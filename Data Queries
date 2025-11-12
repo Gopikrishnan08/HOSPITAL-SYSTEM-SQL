@@ -1,0 +1,19 @@
+-- Select all patients
+SELECT * FROM Patient;
+
+-- Find all appointments for a specific doctor (e.g., Doctor ID 201)
+SELECT * FROM Appointment
+WHERE doctor_id = 201 AND appointment_date = '2025-11-20';
+
+-- Join Patient and Doctor tables to see which doctor is seeing which patient
+SELECT
+    P.pname AS PatientName,
+    D.dname AS DoctorName,
+    A.appointment_date,
+    A.appointment_time
+FROM
+    Appointment A
+JOIN
+    Patient P ON A.patient_id = P.patient_id
+JOIN
+    Doctor D ON A.doctor_id = D.doctor_id;
