@@ -1,0 +1,11 @@
+-- Insert sample data into Patient table
+INSERT INTO Patient (patient_id, pname, age, gender, paddress, contact_number)
+VALUES (101, 'Alice Johnson', 35, 'Female', '123 Main St', '555-0101');
+
+-- Insert sample data into Doctor table
+INSERT INTO Doctor (doctor_id, dname, specialization, department_id, contact_number)
+VALUES (201, 'Dr. Bob Smith', 'Cardiology', 1, '555-0202');
+
+-- Insert sample data into Appointment table
+INSERT INTO Appointment (appointment_id, patient_id, doctor_id, appointment_date, appointment_time, status)
+VALUES (301, 101, 201, '2025-11-20', '10:00:00', 'Scheduled');
